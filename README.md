@@ -1,0 +1,1 @@
+# gulp-hook-amd
