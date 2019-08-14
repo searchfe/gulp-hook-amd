@@ -6,9 +6,16 @@ yarn-debug.log*
 yarn-error.log*
 build/*
 www-wise/*
-dist/*
 stub/*
 test/*
+gulpfile.js
+tscompile.json
+tsconfig.json
+tslint.json
+.babelrc
+src/*
+test/*
+stub/*
 # Runtime data
 pids
 *.pid
