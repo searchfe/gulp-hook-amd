@@ -8,6 +8,7 @@ build/*
 www-wise/*
 stub/*
 test/*
+dist/*
 gulpfile.js
 tscompile.json
 tsconfig.json
