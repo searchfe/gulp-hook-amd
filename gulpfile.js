@@ -9,3 +9,4 @@ gulp.task("build:ts", function () {
       .pipe(tsProject())
       .pipe(gulp.dest("dist"));
 });
+gulp.task('default', gulp.series('build:ts'));

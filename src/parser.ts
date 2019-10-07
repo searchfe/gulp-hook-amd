@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import Package from './package';
-import { String } from 'lodash';
 
 const SEP:RegExp = new RegExp('\\' + path.sep, 'g');
 const defaultPath2url:Function = (x:string):string => JSON.stringify(x.replace(/\.js$/, ''));
@@ -44,8 +43,6 @@ export default class Parser {
         if (path.extname(fullname) !== '.js') {
             return false;
         }
-        // fullname: /Users/harttle/test/amd_modules/ralltiir.js
-        // relative: ralltiir
         let relative = fullname.slice(this.modulesPath.length + 1, -3);
         let tokens = relative.split('/');
         if (tokens.length > 2) {
