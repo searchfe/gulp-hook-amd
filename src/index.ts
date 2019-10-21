@@ -1,5 +1,5 @@
 import Parser from './parser';
-import { Transform } from 'readable-stream';
+import { Transform } from './cacheTransform';
 import { File, PluginError } from 'gulp-util';
 export { amdUrlParser } from './amdUri';
 

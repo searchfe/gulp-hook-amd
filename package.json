@@ -1,6 +1,6 @@
 {
-  "name": "gulp-parser-apm",
-  "version": "0.0.1",
+  "name": "@baidu/gulp-parser-apm",
+  "version": "0.0.2-beta",
   "description": "fis3-parser-apm in gulp",
   "main": "dist/index.js",
   "directories": {
@@ -41,5 +41,10 @@
     "madge": "^3.4.4",
     "readable-stream": "^3.3.0"
   },
+  "files": [
+    "dist",
+    "*.json",
+    "*.md"
+  ],
   "homepage": "https://github.com/searchfe/gulp-parser-apm#readme"
 }
