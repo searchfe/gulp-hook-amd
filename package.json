@@ -1,6 +1,6 @@
 {
   "name": "@baidu/gulp-parser-apm",
-  "version": "0.0.2-beta",
+  "version": "0.0.3-beta",
   "description": "fis3-parser-apm in gulp",
   "main": "dist/index.js",
   "directories": {
@@ -37,6 +37,7 @@
   "dependencies": {
     "debug": "^4.1.1",
     "glob": "^7.1.4",
+    "gulp-transform-cache": "0.0.3",
     "gulp-util": "^3.0.8",
     "madge": "^3.4.4",
     "readable-stream": "^3.3.0"

@@ -1,11 +1,11 @@
 import Parser from './parser';
-import { Transform } from './cacheTransform';
+import { Transform } from 'gulp-transform-cache';
 import { File, PluginError } from 'gulp-util';
 export { amdUrlParser } from './amdUri';
-
+class Pipe extends Transform {}
 export function apmParser(option: any) {
     let parser = Parser.create(option.projectPath);
-    return new Transform({
+    return new Pipe({
         objectMode: true,
         transform: (file: File, enc, callback: Function) => {
             if (file.isNull()) {
