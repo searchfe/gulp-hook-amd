@@ -1,6 +1,6 @@
 {
   "name": "gulp-parser-apm",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "fis3-parser-apm in gulp",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/searchfe/gulp-hook-amd.git"
+    "url": "https://github.com/searchfe/gulp-parser-apm.git"
   },
   "author": {
     "name": "lijie0981",
@@ -23,7 +23,7 @@
     "url": "https://github.com/searchfe/gulp-parser-apm/issues"
   },
   "devDependencies": {
-    "semantic-release": "^15.13.12",
+    "semantic-release": "^15.13.27",
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
