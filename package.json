@@ -1,6 +1,6 @@
 {
   "name": "gulp-parser-apm",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "fis3-parser-apm in gulp",
   "main": "dist/index.js",
   "scripts": {
