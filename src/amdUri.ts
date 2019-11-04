@@ -4,7 +4,7 @@ import { File, PluginError } from 'gulp-util';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as parseJson from 'fast-json-parse';
-function getFileDataFromResourceMap(key: string, sourceMapPath: string): any {
+function getFileDataFromResourceMap (key: string, sourceMapPath: string): any {
     console.time('apm read source');
     key = path.relative(process.cwd(), key);
     if (fs.existsSync(sourceMapPath)) {
