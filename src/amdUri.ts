@@ -3,13 +3,17 @@ import { Transform } from 'readable-stream';
 import { File, PluginError } from 'gulp-util';
 import * as fs from 'fs';
 import * as path from 'path';
-function getFileDataFromResourceMap (key:string, sourceMapPath:string):any {
-    key = key.indexOf('www-wise/') !== -1 ? key.split('www-wise/')[1] : key;
+import * as parseJson from 'fast-json-parse';
+function getFileDataFromResourceMap(key: string, sourceMapPath: string): any {
+    console.time('apm read source');
+    key = path.relative(process.cwd(), key);
     if (fs.existsSync(sourceMapPath)) {
         const fileContent = fs.readFileSync(sourceMapPath, 'utf-8');
-        const fileObj = JSON.parse(fileContent || '{}');
+        const fileObj = parseJson(fileContent || '{}');
+        console.timeEnd('apm read source');
         return fileObj[key] ? fileObj[key] : {};
     }
+    console.timeEnd('apm read source');
     return {};
 }
 
