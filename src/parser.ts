@@ -9,8 +9,8 @@ let singleton:any;
 export default class Parser {
     modulesPath:string;
     projectPath:string;
-    constructor (projectPath:string) {
-        this.modulesPath = this.resolveModulesPath(projectPath);
+    constructor (projectPath:string, modulesPath?: string) {
+        this.modulesPath = modulesPath ? path.resolve(modulesPath) : this.resolveModulesPath(projectPath);
         this.projectPath = path.resolve(projectPath);
     }
     resolveModulesPath (projectPath:string):string {
@@ -90,9 +90,9 @@ export default class Parser {
                 () => this.amdConfig(settings.path2url, file)
             );
     }
-    static create (projectPath:string):any {
+    static create (projectPath: string, modulesPath?: string): Parser {
         if (!singleton) {
-            singleton = new Parser(projectPath);
+            singleton = new Parser(projectPath, modulesPath);
         }
         return singleton;
     }

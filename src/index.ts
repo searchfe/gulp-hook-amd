@@ -3,8 +3,8 @@ import { Transform } from 'gulp-transform-cache';
 import { File, PluginError } from 'gulp-util';
 export { amdUrlParser } from './amdUri';
 class ApmParser extends Transform {}
-export function apmParser (option: any) {
-    const parser = Parser.create(option.projectPath);
+export function apmParser (option: ApmParserOpiton) {
+    const parser = Parser.create(option.projectPath, option.modulesPath);
     return new ApmParser({
         objectMode: true,
         transform: (file: File, enc, callback: Function) => {
@@ -19,3 +19,8 @@ export function apmParser (option: any) {
         }
     });
 };
+
+interface ApmParserOpiton {
+    projectPath: string
+    modulesPath?: string
+}
